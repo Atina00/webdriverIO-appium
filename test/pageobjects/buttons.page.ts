@@ -1,5 +1,3 @@
-// buttons.page.ts
-
 class ButtonsPage {
   get buttonsElement() {
     return $('//XCUIElementTypeStaticText[@name="Alert Views"]');
@@ -20,16 +18,15 @@ class ButtonsPage {
     await yourButton.click();
   
     // Wait for the popup to be displayed
-    const popup = $('//XCUIElementTypeStaticText[@name="A Short Title Is Best"]'); // Replace with the actual selector for the popup
+    const popup = $('//XCUIElementTypeStaticText[@name="A Short Title Is Best"]');
     await popup.waitForDisplayed({ timeout: 5000 });
   
-    // Perform actions on the popup
-    // For example, if the popup has an OK button:
-    const okButton = $('//XCUIElementTypeButton[@name="OK"]'); // Replace with the actual selector for the OK button
+  
+    const okButton = $('//XCUIElementTypeButton[@name="OK"]'); 
     await okButton.waitForDisplayed({ timeout: 5000 });
     await okButton.click();
   
-    // Optionally, you can wait for the popup to be dismissed
+
     await popup.waitForDisplayed({ timeout: 5000, reverse: true });
   }
 }
