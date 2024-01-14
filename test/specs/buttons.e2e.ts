@@ -1,5 +1,3 @@
-// example.e2e.ts
-
 import ButtonsPage from '../pageobjects/buttons.page';
 
 describe('Buttons Section', () => {
